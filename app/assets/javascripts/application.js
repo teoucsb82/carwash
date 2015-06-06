@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require core_plugins
+//= require page_level
+//= require layer_slider
+//= require frontend/layout/scripts/layout
 //= require_tree .
