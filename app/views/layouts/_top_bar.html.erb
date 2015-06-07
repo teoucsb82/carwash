@@ -1,0 +1,31 @@
+<!-- BEGIN TOP BAR -->
+<div class="pre-header">
+  <div class="container">
+    <div class="row">
+    <!-- BEGIN TOP BAR LEFT PART -->
+      <div class="col-md-6 col-sm-6 additional-shop-info">
+        <ul class="list-unstyled list-inline">
+          <li>
+            <i class="fa fa-phone"></i>
+            <span>+1 555 1234</span>
+          </li>
+        </ul>
+      </div>
+      <!-- END TOP BAR LEFT PART -->
+
+      <!-- BEGIN TOP BAR MENU -->
+      <div class="col-md-6 col-sm-6 additional-nav">
+        <ul class="list-unstyled list-inline pull-right">
+          <% if current_user %>
+            <li><%= link_to "My Account", nil %></li>
+          <% else %>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up Now", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </div>
+      <!-- END TOP BAR MENU -->
+    </div>
+  </div>        
+</div>
+<!-- END TOP BAR -->

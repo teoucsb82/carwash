@@ -3,3 +3,4 @@
 //= require global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.min
 //= require global/plugins/zoom/jquery.zoom.min
 //= require global/plugins/bootstrap-touchspin/bootstrap.touchspin
+//= require global/plugins/uniform/jquery.uniform.min

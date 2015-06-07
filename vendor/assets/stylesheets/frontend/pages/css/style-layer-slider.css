@@ -93,20 +93,22 @@
 /* slide 3 */
 .ls-slide3 .ls-title {
 	font: 300 46px/59px 'Source Sans Pro', Arial, sans-serif;
-	color: #fff;
-	border-bottom: solid 1px #b90010 !important;
+	color: #000;
+	border-bottom: solid 1px $brand-primary !important;
 	text-align: center;
 	padding-bottom: 27px;
+	font-weight: 500;
 }
 .ls-slide3 .ls-title strong {
 	display: block;
+	color: $brand-primary;
 	font-weight: 600;
 }
 .ls-slide3 .ls-buy {
 	color: #fff;
-	border: solid 5px rgba(55,0,5,0.6);
+	border: solid 5px darken($brand-primary, 10%);
 	padding: 12px 20px 8px;
-	background: #d11018;
+	background: $brand-primary;
 	float: left;
 	margin-right: 20px;
 }
@@ -171,4 +173,8 @@
 	text-decoration: none;
 	color: #fff;
 	background: #e6400c;
+}
+
+.ls-slide > img {
+	opacity: 0.8;
 }

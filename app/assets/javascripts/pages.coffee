@@ -8,6 +8,7 @@ $ ->
   LayersliderInit.initLayerSlider()
   Layout.initImageZoom()
   Layout.initTouchspin()
+  Layout.initUniform()
   Layout.initTwitter()
   Layout.initFixHeaderWithPreHeader()
   Layout.initNavScrolling()

@@ -715,7 +715,6 @@ body.page-header-fixed {
 	content: none;
 }*/
 .header-navigation .search-box {
-	right: -7px;
 	top: 100%;
 	padding: 15px;
 	display: none;
@@ -723,7 +722,7 @@ body.page-header-fixed {
 	position: absolute;
 	border-top: solid 2px #ea4c1d;
 	box-shadow: 5px 5px rgba(91, 91, 91, 0.2);
-	width: 274px;
+	width: 320px;
 	margin-top: 0;
 	z-index: 22;
 }
@@ -2971,7 +2970,7 @@ Styler Panel
 }
 .color-panel .icon-color-close {
   display: none;
-  background: #3d3d3d url(img/icon-color-close.png) center no-repeat;
+  background: #3d3d3d url(images/img/icon-color-close.png) center no-repeat;
 }
 .color-panel .icon-color-close:hover {
   background-color: #222;
