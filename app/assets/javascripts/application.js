@@ -17,5 +17,3 @@
 //= require core_plugins
 //= require page_level
 //= require layer_slider
-//= require frontend/layout/scripts/layout
-//= require_tree .

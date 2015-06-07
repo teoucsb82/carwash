@@ -4,19 +4,3 @@
 //= require global/plugins/zoom/jquery.zoom.min
 //= require global/plugins/bootstrap-touchspin/bootstrap.touchspin
 //= require global/plugins/uniform/jquery.uniform.min
-// Admin
-//= require global/plugins/jqvmap/jqvmap/jquery.vmap
-//= require global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia
-//= require global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world
-//= require global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe
-//= require global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany
-//= require global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa
-//= require global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata
-//= require global/plugins/morris/morris.min
-//= require global/plugins/morris/raphael-min
-//= require global/plugins/jquery.sparkline.min
-//= require global/scripts/metronic
-//= require admin/layout4/scripts/layout
-//= require admin/layout4/scripts/demo
-//= require admin/pages/scripts/index3
-//= require admin/pages/scripts/tasks

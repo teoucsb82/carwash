@@ -1,0 +1,11 @@
+<div class="page-sidebar-wrapper">
+  <div class="page-sidebar navbar-collapse collapse">
+    <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+      <%= li_tab "Home", profile_path, "home" %>
+      <%= li_tab "Vehicles", vehicles_path, "car" %>
+      <%= li_tab "Settings", settings_path, "gear" %>
+      <%= li_tab "Billing", billing_path, "dollar" %>
+      <%= li_tab "Sign Out", destroy_user_session_path, "sign-out" %>
+    </ul>
+  </div>
+</div>
