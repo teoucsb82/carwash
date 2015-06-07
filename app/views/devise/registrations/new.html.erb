@@ -1,29 +1,76 @@
-<h2>Sign up</h2>
+<div class="main">
+  <div class="container">
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="javascript:;">Pages</a></li>
+        <li class="active">Create new account</li>
+    </ul>
+    <!-- BEGIN SIDEBAR & CONTENT -->
+    <div class="row margin-bottom-40">
+      <!-- BEGIN SIDEBAR -->
+      <div class="sidebar col-md-3 col-sm-3">
+        <ul class="list-group margin-bottom-25 sidebar-menu">
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Login/Register</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Restore Password</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> My account</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Address book</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Wish list</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Returns</a></li>
+          <li class="list-group-item clearfix"><a href="javascript:;"><i class="fa fa-angle-right"></i> Newsletter</a></li>
+        </ul>
+      </div>
+      <!-- END SIDEBAR -->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+      <!-- BEGIN CONTENT -->
+      <div class="col-md-9 col-sm-9">
+        <h1>Create an account</h1>
+        <div class="content-form-page">
+          <div class="row">
+            <div class="col-md-7 col-sm-7">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-horizontal" }) do |f| %>
+                <fieldset>
+                  <legend>Your personal details</legend>
+                  <div class="form-group">
+                    <%= f.label :email, class: "col-lg-4 control-label" %>
+                    <div class="col-lg-8">
+                      <%= f.email_field :email, autofocus: true, class: "form-control" %>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password, class: "col-lg-4 control-label" %>
+                    <div class="col-lg-8">
+                      <% if @minimum_password_length %>
+                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                      <% end %>
+                      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password_confirmation, class: "col-lg-4 control-label" %>
+                    <div class="col-lg-8">
+                      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="row">
+                  <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20"> 
+                    <%= f.submit "Sign up", class: "btn btn-primary" %>                       
+                    <button type="button" class="btn btn-default">Cancel</button>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-4 col-sm-4 pull-right">
+              <div class="form-info">
+                <h2><em>Already a Member?</em></h2>
+                <%= link_to "Sign In", new_user_session_path, class: "btn btn-default" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+    </div>
+    <!-- END SIDEBAR & CONTENT -->
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

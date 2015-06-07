@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require global/plugins/jquery-ui/jquery-ui.min
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require core_plugins
