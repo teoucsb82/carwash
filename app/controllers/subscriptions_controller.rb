@@ -1,6 +1,6 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter :load_user
+  before_filter :authenticate_user!, except: [:new]
+  before_filter :load_user, except: [:new]
   before_action :set_subscription, only: [:show, :edit, :update, :destroy]
 
   # GET /subscriptions

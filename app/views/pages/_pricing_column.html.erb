@@ -1,0 +1,32 @@
+<% Subscription::Plans.all.each_with_index do |plan, i| %>
+  <div class="col-md-3">
+    <div class="pricing hover-effect <%= 'pricing-active' if i == 0 %>">
+      <div class="pricing-head <%= 'pricing-head-active' if i == 0 %>">
+        <h3><%= plan[:name].titleize %>
+        <span>
+           <%= plan[:subtext].downcase.capitalize %>
+        </span>
+        </h3>
+        <h4><i>$</i><%= plan[:price] %><i>.00</i>
+        <span>
+           Per Month
+        </span>
+        </h4>
+      </div>
+      <ul class="pricing-content list-unstyled">
+        <li><i class="fa fa-car"></i> <%= pluralize(plan[:cars], "car") %> per month</li>
+        <li><i class="fa fa-building"></i> <%= plan[:locations] %> location</li>
+        <li><i class="fa fa-check"></i> <%= pluralize(plan[:visits_per_month], "visit") %> per month</li>
+        <li><i class="fa fa-star"></i> <%= plan[:description].downcase.capitalize %></li>
+      </ul>
+      <div class="pricing-footer">
+        <p>
+           <%= plan[:description].downcase.capitalize %>
+        </p>
+        <a href="javascript:;" class="btn <%= i == 0 ? 'btn-warning' : 'btn-primary' %>">
+           <%= cta ||= "Sign Up" %></li>
+        </a>
+      </div>
+    </div>
+  </div>
+<% end %>

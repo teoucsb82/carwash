@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'profile' => 'members#profile', as: :profile
   get 'billing' => 'members#billing', as: :billing
   get 'settings' => 'members#settings', as: :settings
+  get '/join' => 'subscriptions#new', as: :join
   
   resources :vehicles, except: [:show]
   root 'pages#home'
