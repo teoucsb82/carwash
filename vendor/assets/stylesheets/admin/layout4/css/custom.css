@@ -17,3 +17,6 @@ Rounded Portlets
 	border-radius: 0px 0px 4px 4px !important;
 }
 */
+$brand-primary: #44b1c1;
+
+.primary-color { color: $brand-primary; }

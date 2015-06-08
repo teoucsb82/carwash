@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  resources :subscriptions
+
   devise_for :users
   get 'pages/home'
   get 'pricing' => 'pages#pricing', as: :pricing
   get 'profile' => 'members#profile', as: :profile
   get 'billing' => 'members#billing', as: :billing
-  get 'vehicles' => 'members#vehicles', as: :vehicles
   get 'settings' => 'members#settings', as: :settings
+  
+  resources :vehicles, except: [:show]
   root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

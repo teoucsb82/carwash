@@ -1,0 +1,47 @@
+<div class="page-content-wrapper">
+  <div class="page-content">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+          <div class="portlet-title">
+            <div class="caption">
+              <i class="fa fa-car"></i>My Vehicles
+            </div>
+          </div>
+          <div class="portlet-body">
+            <div class="table-scrollable">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>License Plate</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @vehicles.each do |vehicle| %>
+                    <tr>
+                      <td><%= vehicle.year %></td>
+                      <td><%= vehicle.make %></td>
+                      <td><%= vehicle.model %></td>
+                      <td><%= vehicle.color %></td>
+                      <td><%= vehicle.licenseplate %></td>
+                      <td><%= vehicle.status %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+            <%= link_to new_vehicle_path, class: "btn btn-success" do %>
+              <%= content_tag(:i, nil, class: 'fa fa-plus') %> Add Vehicle
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
